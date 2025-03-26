@@ -20,7 +20,7 @@
 }
 
 .like-icon .main-body {
-    fill: var(--bg-color);
+    fill: transparent;
     transition: fill .3s linear;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .like-icon .core {
-    fill: var(--bg-color);
+    fill: transparent;
     transition: fill .3s 0.03s linear;
 }
 
@@ -65,11 +65,11 @@
 
 @keyframes scale {
     from {
-        scale: 1;
+        scale: 0;
     }
 
     to {
-        scale: 1.5;
+        scale: 1;
     }
 }
 
@@ -80,16 +80,5 @@
 
     to {
         opacity: 1;
-    }
-}
-
-
-@keyframes path {
-    from {
-        left: 8px;
-    }
-
-    to {
-        left: 4px;
     }
 }

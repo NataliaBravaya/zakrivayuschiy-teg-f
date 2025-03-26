@@ -16,19 +16,19 @@
   font-family: var(--main-font), sans-serif;
   font-variation-settings: 'wght' 400;
   background-image: repeating-linear-gradient(
-          to bottom,
-          var(--bg-color) 0px 2px,
+          to right,
+          #d3d3d3 0px 2px,
           transparent 2px 4px
   ),
   repeating-linear-gradient(
-          to right,
-          var(--bg-color) 0 2px,
+          to bottom,
+          #d3d3d3 0 2px,
           transparent 2px 4px
   ),
   linear-gradient(
-          180deg,
-          var(--linear-gradient-first) 0%,
-          var(--linear-gradient-second) 100%
+          to bottom,
+          #e7e7e7 0%,
+          #1a1a1a 100%
   );
   background-size: cover;
   background-attachment: fixed;
@@ -47,7 +47,6 @@
   justify-content: center;
   align-items: center;
   padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0px;
-  height: 364px;
 }
 
 .header__title {
@@ -61,11 +60,9 @@
   font-family: var(--accent-font), fantasy;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   margin-block-end: 4px;
-}
-
-h1 {
   color: var(--text-color);
 }
+
 
 .content {
   margin: 0 auto;
@@ -73,9 +70,6 @@ h1 {
   margin-block-start: 100px;
 }
 
-.main {
-
-}
 
 .card {
   margin-block-end: 50px;
@@ -113,7 +107,8 @@ h1 {
   margin: 0;
   padding: 0;
   position: relative;
-  border: 2px solid var(--border-color);
+  border-left: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
   border-block-start: none;
   aspect-ratio: 1 / 1;
 }
@@ -173,7 +168,7 @@ h1 {
   outline: none;
 }
 
-.theme-menu__button:focus,
+
 .text-button:focus {
   outline: none;
 }
@@ -195,7 +190,6 @@ h1 {
 
 .text-button:focus-visible {
   outline: none;
-  border: 2px solid var(--text-color);
   box-shadow: 2px 2px 0 0 var(--text-color);
 }
 
@@ -357,4 +351,27 @@ h1 {
   block-size: 39px;
   inline-size: 39px;
   stroke: var(--border-color);
+}
+
+
+@media (width <= 375px) {
+  .image {
+    height: 107%;
+  }
+
+  .card__like-button {
+    padding: 0;
+  }
+
+  .card__buttons {
+    width: 100%;
+  }
+
+  .card__content {
+    padding: 25px 0 25px 25px;
+  }
+
+  .header {
+    padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 22px;
+  }
 }
