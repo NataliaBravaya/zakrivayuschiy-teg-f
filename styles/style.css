@@ -11,6 +11,7 @@
 */
 
 .page {
+  background-color: #d3d3d3;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
@@ -46,7 +47,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0px;
+  padding: 7.8rem 0 7.5rem 0;
 }
 
 .header__title {
@@ -75,7 +76,7 @@
   margin-block-end: 50px;
   background-color: var(--bg-color);
   color: var(--text-color);
-  padding-top: 3px;
+  padding-top: 2px;
 }
 
 .card__title {
@@ -356,7 +357,11 @@
 
 @media (width <= 375px) {
   .image {
-    height: 107%;
+    height: 100%;
+  }
+
+  .card {
+    padding-top: 2px;
   }
 
   .card__like-button {
@@ -368,10 +373,22 @@
   }
 
   .card__content {
-    padding: 25px 0 25px 25px;
+    padding: 21px 30px 25px 25px;
+  }
+
+  .card__content-text {
+    margin-block-end: 25px;
   }
 
   .header {
-    padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 22px;
+    padding: 7.5rem 0 7.5rem 0.2rem;
+    gap: 18px;
+  }
+
+  .button-remember {
+    flex-direction: column;
+    padding:  20px 20px 15px 20px;
+    gap: 15px;
   }
 }
+
